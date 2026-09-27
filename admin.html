@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adlaon Optical - Admin</title>
+  <link rel="stylesheet" href="adminstyles.css">
+
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <div class="logo">
+        <img src="AdlaonLogo-nobg.svg" alt="Logo" style="width: 225px;" />
+      </div>
+      <div class="nav-links">
+        <a class="nav-link active" href="#" data-view="dashboard">
+          <img src="icons/" alt="Dashboard Icon" />
+          Dashboard
+        </a>
+        <a class="nav-link" href="#" data-view="users">
+          <img src="users.svg" alt="User Icon" />
+          User Management
+        </a>
+        <a class="nav-link" href="#" data-view="products">
+            <img src="eyewear.svg" alt="Eyewearcon" />
+            Eyewear Products
+          </a>
+          <a class="nav-link" href="#" data-view="appointments">
+            <img src="appointments.svg" alt="Appointments Icon" />
+            Appointments
+          </a>
+      </div>
+      
+    </div>
+    <div class="bottom-links">
+      <a href="index.php"><img src="icons/visit.svg">Visit website</a>
+      <a href="login.php"><img src="icons/logout.svg">Log out</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <div id="dashboard" class="view active dashboard">
+      <h2>Dashboard Overview</h2>
+      <p>Welcome back, Admin!</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Total Appointments</h3>
+          <div class="value">28</div>
+          <div class="sub">This month</div>
+        </div>
+        <div class="card">
+          <h3>Pending appointments</h3>
+          <div class="value">12</div>
+          <div class="sub">This month</div>
+        </div>
+        <div class="card">
+          <h3>Total Sales</h3>
+          <div class="value">₱ 95,000</div>
+          <div class="sub">This month</div>
+        </div>
+        <div class="card">
+          <h3>Total Eyewear Available</h3>
+          <div class="value">4</div>
+          <div class="sub">Eyewear Products</div>
+        </div>
+      </div>
+      <div class="appointment">
+        <h3>Today's Appointments</h3>
+        <table class="appointments-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Email</th>
+              <th>Service</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time">9:00 AM</td>
+              <td>hensley.santos9@gmail.com</td>
+              <td>Comprehensive Eye Exams</td>
+              <td><span class="status completed">COMPLETED</span></td>
+            </tr>
+            <tr>
+              <td class="time">10:30 AM</td>
+              <td>robbjullianolazo@gmail.com</td>
+              <td>Contact Lens Fitting</td>
+              <td><span class="status pending">PENDING</span></td>
+            </tr>
+            <tr>
+                <td class="time">10:30 AM</td>
+                <td>juanpaolo@gmail.com</td>
+                <td>Dih Massage</td>
+                <td><span class="status pending">PENDING</span></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      
+    </div>
+
+    <div id="users" class="view">
+      <h2>User Management</h2>
+      <p></p>
+    </div>
+
+    <div id="products" class="view">
+      <h2>Eyewear Products</h2>
+      <p>Ayoko na.</p>
+    </div>
+
+    <div id="appointments" class="view">
+      <h2>Appointments</h2>
+      <p></p>
+    </div>
+  </div>
+
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const views = document.querySelectorAll('.view');
+  
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        // Update active class on sidebar
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+  
+        // Show the selected view
+        const targetView = this.getAttribute('data-view');
+        views.forEach(view => {
+          view.classList.remove('active');
+          if (view.id === targetView) {
+            view.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>

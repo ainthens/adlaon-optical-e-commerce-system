@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eyewearstyless.css">
+    <title>AdlaonOptical - Eyewear</title>
+</head>
+<body>  
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="AdlaonLogo.svg" alt="Adlaon Optical" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#eyewear" class="active">Eyewear</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#appointment" class="appointment-btn">Book Appointment</a></li>
+                <li>
+                    <a href="#cart" class="cart-btn">
+                        <img src="cart-icon.svg" alt="Shopping Cart">
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li><a href="login.php" class="login-btn">Log In</a></li>
+                <li><a href="signup.php" class="signup-btn">Sign Up</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div id="cart-container" class="cart-container">
+        <div class="cart-header">
+            <h3>Cart</h3>
+            <button id="close-cart" class = "close-cart">x</button>
+        </div>
+    <div id="cart-items" class="cart-items">
+    
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-amount">₱0.00</span>
+      </div>
+      <button id="checkout-btn" class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+  
+  <div id="cart-overlay" class="cart-overlay"></div>
+  
+      
+    <section id="products" class="eyewear-section">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-button active" data-filter="all">
+                    <img src="all-eyewear.svg" alt="All Eyewear" class="filter-icon active">
+                    All Eyewear
+                </button>
+                <button class="filter-button" data-filter="eyeglasses">
+                    <img src="eyeglasses.svg" alt="Eyeglasses" class="filter-icon">
+                    Eyeglasses
+                </button>
+                <button class="filter-button" data-filter="sunglasses">
+                    <img src="sunglasses.svg" alt="Sunglasses" class="filter-icon">
+                    Sunglasses
+                </button>
+                <button class="filter-button" data-filter="sports">
+                    <img src="sports.svg" alt="Sports Eyewear" class="filter-icon">
+                    Sports
+                </button>
+                <button class="filter-button" data-filter="kids">
+                    <img src="kids.svg" alt="Kids Eyewear" class="filter-icon">
+                    Kids
+                </button>
+                <button class="filter-button" data-filter="reading">
+                    <img src="reading.svg" alt="Reading Glasses" class="">
+                    Reading
+                </button>
+            </div>
+            
+            <div class="products-grid">
+
+                <div class="product-card" data-category="eyeglasses">
+                    <div class="product-image">
+                        <span class="product-badge">Best Seller</span>
+                        <img src="eyewear-1.jpg" alt="glasses">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Eyeglasses</div>
+                        <h3 class="product-title">Classic Round Frames</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱3,499</span>
+                            <span class="original-price">₱4,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg" alt="Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sunglasses">
+                    <div class="product-image">
+                        <span class="product-badge">New</span>
+                        <img src="eyewear-1.jpg" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Sunglasses</div>
+                        <h3 class="product-title">Premium Aviator Sunglasses</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱2,499</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg" alt="Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="eyeglasses">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/220" alt="">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Eyeglasses</div>
+                        <h3 class="product-title">Rectangular Full-Rim Frames</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱4,000</span>
+                            <span class="original-price">₱5,499</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg"Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="sports">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/220" alt="Sport Performance Glasses">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Sports</div>
+                        <h3 class="product-title">Sport Performance Glasses</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱5,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg" alt="Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="kids">
+                    <div class="product-image">
+                        <span class="product-badge">Popular</span>
+                        <img src="/api/placeholder/300/220" alt="Kids Flexible Frames">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Kids</div>
+                        <h3 class="product-title">Kids Flexible Frames</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱2,499</span>
+                            <span class="original-price">₱3,999</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg" alt="Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="reading">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/220" alt="Premium Reading Glasses">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Reading</div>
+                        <h3 class="product-title">Premium Reading Glasses</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱1,499</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg" alt="Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="sunglasses">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/220" alt="Round Polarized Sunglasses">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Sunglasses</div>
+                        <h3 class="product-title">Round Polarized Sunglasses</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱4,459</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg" alt="Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="eyeglasses">
+                    <div class="product-image">
+                        <span class="product-badge">Sale</span>
+                        <img src="/api/placeholder/300/220" alt="Lightweight Titanium Frames">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Eyeglasses</div>
+                        <h3 class="product-title">Lightweight Titanium Frames</h3>
+                        <div class="product-price">
+                            <span class="current-price">₱3,499</span>
+                            <span class="original-price">₱5,499</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <img src="cart-icon.svg" alt="Cart Icon">
+                                Add to Cart
+                            </button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="eyewearscript.js"></script>
+
+</body>
+</html>

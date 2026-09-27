@@ -1,0 +1,89 @@
+.profile-container {
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .profile-container h2 {
+        color: #007BFF;
+        margin-bottom: 25px;
+    }
+
+    .profile-picture-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .profile-pic-preview {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #007BFF;
+        margin-bottom: 12px;
+    }
+
+    input[type="file"] {
+        padding: 8px;
+    }
+
+    .form-fields label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .form-fields input[type="text"],
+    .form-fields input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.3s;
+    }
+
+    .form-fields input:focus {
+        border-color: #007BFF;
+        outline: none;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .btn-apply,
+    .btn-back {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+    }
+
+    .btn-apply {
+        background: linear-gradient(to right, #007BFF, #00BFFF);
+    }
+
+    .btn-back {
+        background: #6c757d;
+    }
+
+    .btn-apply:hover {
+        background: linear-gradient(to right, #0056b3, #009ac7);
+    }
+
+    .btn-back:hover {
+        background: #5a6268;
+    }
